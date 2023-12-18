@@ -3,8 +3,7 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config();
 
-const PORT = process.env.PORT || 3000;
-
+const port = process.env.PORT || 5000;
 
 // ! Middleware
 app.use(cors());
@@ -369,6 +368,6 @@ app.get('/', (req, res) => {
     res.send('Att. server is running')
 })
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-  });
+app.listen(port, () => {
+    console.log(`server is running on port ${port}`)
+})
